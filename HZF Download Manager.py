@@ -41,7 +41,7 @@ def downloadEmail():
 file = Button(text='Скачать HZF Bomber V1.2', command=downloadSms)
 file.pack()
 file.place(x=11, y=26)
-file = Button(text='Скачать HZF Email Bomber V1.2', command=downloadEmail)
+file = Button(text='Скачать HZF Email Bomber V1.0', command=downloadEmail)
 file.pack()
 file.place(x=11, y=63)
 poetry = 'Downloader Manager by HZF'
