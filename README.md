@@ -1,2 +1,9 @@
-# HZF-Download-Manager
-Program download manager from HZF
+# Установка
+* Скачиваем архив
+* Распаковываем в удобную нам директорию
+* Запускаем Terminal
+* Переходим в корень с бомбером
+* Запускаем установку доп. компонентов: python Install.py
+
+# Запуск
+* Вводим в Terminal: python "HZF Download Manager.py"
