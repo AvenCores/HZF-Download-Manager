@@ -14,4 +14,4 @@
 * Если появились вопросы, то пишите мне в Телеграм! @avencores
 
 # Telegram Channel
-* У бомбера есть свой Telegram-канал! @hzfnews
+* У Download Manager есть свой Telegram-канал! @hzfnews
