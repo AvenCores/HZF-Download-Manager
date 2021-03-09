@@ -4,7 +4,7 @@ import os
 import time
 import requests
 
-version = 1.0
+version = 1.1
 set = [1, 10]
 fav_phones = []
 
@@ -19,9 +19,9 @@ def update():
     print("Проверка обновлений")
     try:
         upd=requests.get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/last_version.txt')
-        upd_vers = float(upd.text[0:1])
+        upd_vers = float(upd.text[0:5])
         if upd_vers > version:
-            print("Найдено обновление\n" + upd.text[0:1] + "\nИзменения:\n" + upd.text[3:])
+            print("Найдено обновление\n" + upd.text[0:5] + "\nИзменения:\n" + upd.text[7:])
             print("\nНачато обновление")
             upd_boom=requests.get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF%20Download%20Manager.py')
             f = open("HZF Download Manager.py", "wb")
@@ -57,7 +57,7 @@ def downloadEmail():
             print(error)
         os.system('cls' if os.name == 'nt' else 'clear')
         f=open(r'c:/Bomber/HZF Email Bomber.zip', "wb")
-        ufr = requests.get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.0/Email.Bomber.by.HZF.zip")
+        ufr = requests.get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
         f.write(ufr.content)
         f.close()
         messagebox.showinfo(title="Удачно", message='Email Bomber был скачен в папку C:\Bomber')
