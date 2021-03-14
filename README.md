@@ -5,7 +5,7 @@
 * Переходим в корень с программой
 
 # Запуск
-* Вводим в Terminal: python "HZF Download Manager V2.py"
+* Вводим в Terminal: python "HZF Download Manager V2.1.py"
 
 # Важная информация
 * Download Manager работает только на Windows
