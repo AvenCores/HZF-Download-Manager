@@ -17,7 +17,7 @@ def installSMS():
             try:
                 os.mkdir(path)
             except OSError as error:
-                print(error)
+                False
             os.system('cls')
             f=open(r'c:/Bomber/HZF Bomber.zip',"wb")
             ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.2/HZF.SMS.BOMBER.V1.2.zip")
@@ -37,7 +37,7 @@ def installEmail():
             try:
                 os.mkdir(path)
             except OSError as error:
-                print(error)
+                False
             os.system('cls')
             f=open(r'c:/Bomber/HZF Email Bomber.zip', "wb")
             ufr = requests.get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
