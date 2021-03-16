@@ -1,16 +1,11 @@
 
 import os
-os.system("pip3 install tk requests")
-from tkinter import *
-from tkinter import messagebox
+os.system("pip3 install requests")
+os.system("cls")
 import time
 import requests
 
-root = Tk()
-root.title('Download Manager V2.1')
-root.geometry('350x170')
-root.resizable(width=False, height=False)
-os.system('cls')
+version = 2.2
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -29,8 +24,9 @@ def installSMS():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='SMS Bomber был скачен в папку C:\HZF Project')
-            return "exit"
+            global banner
+            print(banner+"\nSMS Bomber был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            input()
 
 def installVkTok():
             path = 'c:/HZF Project'
@@ -49,8 +45,9 @@ def installVkTok():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='Token Manager был скачен в папку C:\HZF Project')
-            return "exit"
+            global banner
+            print(banner+"\nToken Manager был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            input()
 
 def installEmail():
             path = 'c:/HZF Project'
@@ -63,19 +60,31 @@ def installEmail():
             ufr = requests.get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
             f.write(ufr.content)
             f.close()
-            messagebox.showinfo(title="Удачно", message='Email Bomber был скачен в папку C:\HZF Project')
-            return "exit"
+            global banner
+            print(banner+"\nEmail Bomber был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            input()
 
-file = Button(text='Скачать HZF Bomber V1.2', command=installSMS)
-file.pack()
-file.place(x=11, y=26)
-file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
-file.pack()
-file.place(x=11, y=63)
-file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
-file.pack()
-file.place(x=11, y=100)
-poetry = 'Downloader Manager V2.1 by HZF'
-label3 = Label(text=poetry, justify=CENTER)
-label3.place(x=10, y=145)
-root.mainloop()
+def info():
+    global banner, version
+    print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
+    input()
+
+while True:
+    banner = ("\n" * 100)+ """
+ ______        __  __  __
+|  _ \ \      / / |  \/  | __ _ _ __   __ _  __ _  ___ _ __
+| | | \ \ /\ / /  | |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '__|
+| |_| |\ V  V /   | |  | | (_| | | | | (_| | (_| |  __/ |
+|____/  \_/\_/    |_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|
+                                            |___/
+Telegram Channel: t.me/hzfnews
+VK: vk.com/hzforum1
+    """
+
+    print(banner)
+    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n\n4 - Важная информация!\n\n0 - Выход\n")
+    if menu == "0": exit()
+    if menu == "1": installSMS()
+    if menu == "2": installEmail()
+    if menu == "3": installVkTok()
+    if menu == "4": info()
