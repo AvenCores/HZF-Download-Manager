@@ -49,7 +49,7 @@ def installVkTok():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='SMS Bomber был скачен в папку C:\HZF Project')
+            messagebox.showinfo(title="Удачно", message='Token Manager был скачен в папку C:\HZF Project')
             return "exit"
 
 def installEmail():
