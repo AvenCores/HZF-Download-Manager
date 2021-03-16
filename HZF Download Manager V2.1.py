@@ -69,10 +69,10 @@ def installEmail():
 file = Button(text='Скачать HZF Bomber V1.2', command=installSMS)
 file.pack()
 file.place(x=11, y=26)
-file = Button(text='Скачать HZF Email Bomber V1.1', command=installVkTok)
+file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
 file.pack()
 file.place(x=11, y=63)
-file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installEmail)
+file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
 file.pack()
 file.place(x=11, y=100)
 poetry = 'Downloader Manager V2.1 by HZF'
