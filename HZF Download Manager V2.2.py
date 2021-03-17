@@ -25,7 +25,7 @@ def installSMS():
                 os.system("pip3 install "+bib[i])
             os.system('cls')
             global banner
-            print(banner+"\nSMS Bomber был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            print(banner+"\nSMS Bomber был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
 def installVkTok():
@@ -46,7 +46,7 @@ def installVkTok():
                 os.system("pip3 install "+bib[i])
             os.system('cls')
             global banner
-            print(banner+"\nToken Manager был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            print(banner+"\nToken Manager был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
 def installEmail():
@@ -61,7 +61,7 @@ def installEmail():
             f.write(ufr.content)
             f.close()
             global banner
-            print(banner+"\nEmail Bomber был скачен в папку C:\HZF Project. Нажмите ENTER для выхода в главное меню")
+            print(banner+"\nEmail Bomber был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
 def info():
