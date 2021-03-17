@@ -5,7 +5,7 @@ os.system("cls")
 import time
 import requests
 
-version = 2.2
+version = 2.3
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -64,6 +64,21 @@ def installEmail():
             print(banner+"\nEmail Bomber был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
+def installWinControl():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/Windows Control.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Windows-Control/releases/download/V1.0/Windows.Control.V1.0.zip")
+            f.write(ufr.content)
+            f.close()
+            global banner
+            print(banner+"\nWindows Control был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
+
 def info():
     global banner, version
     print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
@@ -82,9 +97,10 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n\n4 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n\n5 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
     if menu == "3": installVkTok()
-    if menu == "4": info()
+    if menu == "4": installWinControl()
+    if menu == "5": info()
