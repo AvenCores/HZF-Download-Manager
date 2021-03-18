@@ -1,7 +1,5 @@
 
 import os
-os.system("pip3 install requests")
-os.system("cls")
 import time
 import requests
 
