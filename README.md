@@ -6,7 +6,7 @@
 * Запускаем установку доп. компонентов: python Install.py
 
 # Запуск
-* Вводим в Terminal: python "HZF Download Manager V2.4.py"
+* Вводим в Terminal: python "HZF Download Manager V2.4 - CMD.py"
 
 # Важная информация
 * Download Manager работает только на Windows
