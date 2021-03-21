@@ -1,5 +1,4 @@
 import os
-import time
 import requests
 
 version = 2.3
