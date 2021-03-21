@@ -1,7 +1,7 @@
 import os
 import requests
 
-version = 2.3
+version = 2.4
 
 def installSMS():
             path = 'c:/HZF Project'
