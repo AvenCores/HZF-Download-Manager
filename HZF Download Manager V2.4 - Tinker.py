@@ -1,7 +1,6 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-import time
 import requests
 
 root = Tk()
@@ -28,7 +27,6 @@ def installSMS():
                 os.system("pip3 install "+bib[i])
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='SMS Bomber был скачен в папку C:\HZF Project')
-            return "exit"
 
 def installVkTok():
             path = 'c:/HZF Project'
@@ -48,7 +46,6 @@ def installVkTok():
                 os.system("pip3 install "+bib[i])
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='Token Manager был скачен в папку C:\HZF Project')
-            return "exit"
 
 def installEmail():
             path = 'c:/HZF Project'
@@ -62,7 +59,6 @@ def installEmail():
             f.write(ufr.content)
             f.close()
             messagebox.showinfo(title="Удачно", message='Email Bomber был скачен в папку C:\HZF Project')
-            return "exit"
 
 def installWinControl():
             path = 'c:/HZF Project'
@@ -75,9 +71,7 @@ def installWinControl():
             ufr = requests.get("https://github.com/AvenCores/HZF-Windows-Control/releases/download/V1.0/Windows.Control.V1.0.zip")
             f.write(ufr.content)
             f.close()
-            global banner
-            massagebox.showinfo(title="Удачно", message='Windows Control был скачен в папку C:\HZF Project.')
-            return "exit"
+            messagebox.showinfo(title="Удачно", message='Windows Control был скачен в папку C:\HZF Project')
 
 def installWeather():
             path = 'c:/HZF Project'
@@ -96,9 +90,7 @@ def installWeather():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            global banner
-            print(banner+"\nWeather in your city был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-            input()
+            messagebox.showinfo(title="Удачно", message='Weather in your city был скачен в папку C:\HZF Project')
 
 file = Button(text='Скачать HZF Bomber V1.2', command=installSMS)
 file.pack()
