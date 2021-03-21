@@ -87,7 +87,7 @@ def installWeather():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Weather in your city.zip', "wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V1.0/HZF.Weather.V1.0.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V1.1/HZF.Weather.V1.1.zip")
             f.write(ufr.content)
             f.close()
 
@@ -111,7 +111,7 @@ file.pack()
 file.place(x=11, y=100)
 file = Button(text='HZF Windows Control V1.0', command=installWinControl)
 file.place(x=11, y=137)
-file = Button(text='HZF Weather in your city V1.0', command=installWeather)
+file = Button(text='HZF Weather in your city V1.1', command=installWeather)
 file.place(x=11, y=174)
 poetry = 'Downloader Manager V2.4 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
