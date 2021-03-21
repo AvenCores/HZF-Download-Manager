@@ -84,7 +84,7 @@ def installWeather():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Weather in your city.zip', "wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V1.0/HZF.Weather.V1.0.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V1.1/HZF.Weather.V1.1.zip")
             f.write(ufr.content)
             f.close()
 
@@ -115,7 +115,7 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.0\n\n6 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.1\n\n6 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
