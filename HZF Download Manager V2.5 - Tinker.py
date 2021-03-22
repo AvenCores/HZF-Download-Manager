@@ -4,8 +4,8 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V2.4')
-root.geometry('350x244')
+root.title('Download Manager V2.5')
+root.geometry('350x318')
 root.resizable(width=False, height=False)
 os.system('cls')
 
@@ -92,6 +92,44 @@ def installWeather():
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='Weather in your city был скачен в папку C:\HZF Project')
 
+def installproxyinst():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF Downloader Proxy.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Downloader-Proxy/releases/download/V1.0/HZF.Downloader.Proxy.V1.0.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["requests"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            messagebox.showinfo(title="Удачно", message='HZF Downloader Proxy был скачен в папку C:\HZF Project')
+
+def installCsExCheat():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF csgo external cheats.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.0/HZF.csgo.cheats.V1.0.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["requests", "pymem", "keyboard"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            messagebox.showinfo(title="Удачно", message='HZF csgo external cheats был скачен в папку C:\HZF Project')
+
 file = Button(text='Скачать HZF Bomber V1.2', command=installSMS)
 file.pack()
 file.place(x=11, y=26)
@@ -105,7 +143,11 @@ file = Button(text='HZF Windows Control V1.0', command=installWinControl)
 file.place(x=11, y=137)
 file = Button(text='HZF Weather in your city V1.1', command=installWeather)
 file.place(x=11, y=174)
-poetry = 'Downloader Manager V2.4 by HZF'
+file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installproxyinst)
+file.place(x=11, y=211)
+file = Button(text='Скачать HZF csgo external cheats V1.0', command=installCsExCheat)
+file.place(x=11, y=248)
+poetry = 'Downloader Manager V2.5 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
-label3.place(x=10, y=215)
+label3.place(x=10, y=287)
 root.mainloop()
