@@ -1,7 +1,7 @@
 import os
 import requests
 
-version = 2.4
+version = 2.5
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -96,6 +96,48 @@ def installWeather():
             print(banner+"\nWeather in your city был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
+def installproxyinst():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF Downloader Proxy.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Downloader-Proxy/releases/download/V1.0/HZF.Downloader.Proxy.V1.0.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["requests"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            global banner
+            print(banner+"\nHZF Downloader Proxy был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
+
+def installCsExCheat():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF csgo external cheats.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.0/HZF.csgo.cheats.V1.0.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["requests", "pymem", "keyboard"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            global banner
+            print(banner+"\nHZF csgo external cheats был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
+
 def info():
     global banner, version
     print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
@@ -114,11 +156,13 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.1\n\n6 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.1\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.0\n\n8 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
     if menu == "3": installVkTok()
     if menu == "4": installWinControl()
     if menu == "5": installWeather()
-    if menu == "6": info()
+    if menu == "6": installproxyinst()
+    if menu == "7": installCsExCheat()
+    if menu == "8": info()
