@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V2.5')
+root.title('Download Manager V2.6')
 root.geometry('350x318')
 root.resizable(width=False, height=False)
 os.system('cls')
@@ -119,7 +119,7 @@ def installCsExCheat():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF csgo external cheats.zip', "wb")
-            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.0/HZF.csgo.cheats.V1.0.zip")
+            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.1/HZF.csgo.cheats.V1.1.zip")
             f.write(ufr.content)
             f.close()
 
@@ -145,9 +145,9 @@ file = Button(text='HZF Weather in your city V1.1', command=installWeather)
 file.place(x=11, y=174)
 file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installproxyinst)
 file.place(x=11, y=211)
-file = Button(text='Скачать HZF csgo external cheats V1.0', command=installCsExCheat)
+file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
 file.place(x=11, y=248)
-poetry = 'Downloader Manager V2.5 by HZF'
+poetry = 'Downloader Manager V2.6 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=10, y=287)
 root.mainloop()
