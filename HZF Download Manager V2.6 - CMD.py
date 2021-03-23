@@ -1,7 +1,7 @@
 import os
 import requests
 
-version = 2.5
+version = 2.6
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -125,7 +125,7 @@ def installCsExCheat():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF csgo external cheats.zip', "wb")
-            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.0/HZF.csgo.cheats.V1.0.zip")
+            ufr = requests.get("https://github.com/AvenCores/CS-GO-external-cheat/releases/download/V1.1/HZF.csgo.cheats.V1.1.zip")
             f.write(ufr.content)
             f.close()
 
@@ -156,7 +156,7 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.1\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.0\n\n8 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.2\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V1.1\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n\n8 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
