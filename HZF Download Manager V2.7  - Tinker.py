@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V2.6')
+root.title('Download Manager V2.7')
 root.geometry('350x318')
 root.resizable(width=False, height=False)
 os.system('cls')
@@ -81,7 +81,7 @@ def installWeather():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Weather in your city.zip', "wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V1.1/HZF.Weather.V1.1.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Weather/releases/download/V2.0/HZF.Weather.V2.0.zip")
             f.write(ufr.content)
             f.close()
 
@@ -141,13 +141,13 @@ file.pack()
 file.place(x=11, y=100)
 file = Button(text='HZF Windows Control V1.0', command=installWinControl)
 file.place(x=11, y=137)
-file = Button(text='HZF Weather in your city V1.1', command=installWeather)
+file = Button(text='HZF Weather in your city V2.0', command=installWeather)
 file.place(x=11, y=174)
 file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installproxyinst)
 file.place(x=11, y=211)
 file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
 file.place(x=11, y=248)
-poetry = 'Downloader Manager V2.6 by HZF'
+poetry = 'Downloader Manager V2.7 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=10, y=287)
 root.mainloop()
