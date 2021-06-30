@@ -15,3 +15,6 @@
 
 # Telegram Channel
 * У Download Manager есть свой Telegram-канал! @hzfnews
+
+# Меню
+![image](https://user-images.githubusercontent.com/64781822/123987478-e64a0380-d9cf-11eb-8c6e-99de0720adb3.png)
