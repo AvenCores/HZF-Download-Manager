@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V2.7')
+root.title('Download Manager V2.8')
 root.geometry('350x318')
 root.resizable(width=False, height=False)
 os.system('cls')
@@ -17,12 +17,12 @@ def installSMS():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Bomber.zip',"wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.2/HZF.SMS.BOMBER.V1.2.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.3/HZF.SMS.BOMBER.V1.3.zip")
             f.write(ufr.content)
             f.close()
 
             os.system("pip3 install --upgrade pip")
-            bib = ["tk", "colorama", "bs4", "as", "termcolor", "Label", "colored", "requests"]
+            bib = ["tk", "colorama", "bs4", "termcolor", "Label", "colored", "requests"]
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
@@ -130,7 +130,7 @@ def installCsExCheat():
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='HZF csgo external cheats был скачен в папку C:\HZF Project')
 
-file = Button(text='Скачать HZF Bomber V1.2', command=installSMS)
+file = Button(text='Скачать HZF Bomber V1.3', command=installSMS)
 file.pack()
 file.place(x=11, y=26)
 file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
@@ -147,7 +147,7 @@ file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installpr
 file.place(x=11, y=211)
 file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
 file.place(x=11, y=248)
-poetry = 'Downloader Manager V2.7 by HZF'
+poetry = 'Downloader Manager V2.8 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=10, y=287)
 root.mainloop()
