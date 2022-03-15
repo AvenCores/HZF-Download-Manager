@@ -17,4 +17,5 @@
 * У Download Manager есть свой Telegram-канал! @hzfnews
 
 # Меню
-![image](https://user-images.githubusercontent.com/64781822/123987478-e64a0380-d9cf-11eb-8c6e-99de0720adb3.png)
+
+![Снимок (1)](https://user-images.githubusercontent.com/64781822/158377758-7ae5ba5f-bd25-43be-b67e-d0d2932e9fdb.png)
