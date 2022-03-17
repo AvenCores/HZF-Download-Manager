@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V2.8')
+root.title('Download Manager V2.9')
 root.geometry('350x318')
 root.resizable(width=False, height=False)
 os.system('cls')
@@ -17,7 +17,7 @@ def installSMS():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Bomber.zip',"wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.3/HZF.SMS.BOMBER.V1.3.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.4/HZF.SMS.BOMBER.V1.4.zip")
             f.write(ufr.content)
             f.close()
 
@@ -130,7 +130,7 @@ def installCsExCheat():
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='HZF csgo external cheats был скачен в папку C:\HZF Project')
 
-file = Button(text='Скачать HZF Bomber V1.3', command=installSMS)
+file = Button(text='Скачать HZF Bomber V1.4', command=installSMS)
 file.pack()
 file.place(x=11, y=26)
 file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
