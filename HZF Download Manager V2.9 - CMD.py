@@ -1,7 +1,7 @@
 import os
 import requests
 
-version = 2.8
+version = 2.9
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -11,7 +11,7 @@ def installSMS():
                 False
             os.system('cls')
             f=open(r'c:/HZF Project/HZF Bomber.zip',"wb")
-            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.3/HZF.SMS.BOMBER.V1.3.zip")
+            ufr = requests.get("https://github.com/AvenCores/HZF-sms-bomber/releases/download/V1.4/HZF.SMS.BOMBER.V1.4.zip")
             f.write(ufr.content)
             f.close()
 
@@ -156,7 +156,7 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.3\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V2.0\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n\n8 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V2.0\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n\n8 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
