@@ -147,7 +147,7 @@ file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installpr
 file.place(x=11, y=211)
 file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
 file.place(x=11, y=248)
-poetry = 'Downloader Manager V2.8 by HZF'
+poetry = 'Downloader Manager V2.9 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=10, y=287)
 root.mainloop()
