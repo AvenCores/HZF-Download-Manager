@@ -6,5 +6,7 @@ bib = ["requests"]
 for i in range(len(bib)):
     print("Установка "+bib[i]+"...\033[0m")
     os.system("pip3 install "+bib[i])
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 print("Установка завершена!")
+print("\nНажмите Enter чтобы закрыть")
+input()
