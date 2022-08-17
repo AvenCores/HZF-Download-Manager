@@ -11,8 +11,6 @@
 # Важная информация
 * Download Manager работает только на Windows
 
-* Если появились вопросы, то пишите мне в Телеграм! @avencores
-
 # Telegram Channel
 * У Download Manager есть свой Telegram-канал! @hzfnews
 
