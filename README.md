@@ -1,3 +1,7 @@
+[![Youtube](https://user-images.githubusercontent.com/64781822/185656066-cdb875f1-ade6-4499-ae50-79a4f61fdc3e.png)](https://www.youtube.com/c/HZFYT/) [![Telegram](https://user-images.githubusercontent.com/64781822/185657127-657c530b-3849-4931-ab91-63d6f0508330.png)](https://t.me/hzfnews) [![VK](https://user-images.githubusercontent.com/64781822/185657778-21a240e2-da1f-4b72-b37e-447c9adebfcb.png)](https://vk.com/hzforum1) [![Discord](https://user-images.githubusercontent.com/64781822/185659753-b997c6db-c91a-42c0-8876-6826d46568ba.png)](https://discord.com/invite/7bneGfUS5h)[![Баннер](https://user-images.githubusercontent.com/64781822/185762634-2483a0c0-f81a-419e-b41c-8d11fb4a92d2.png)](https://github.com/Lucky1376/ORION-Bomber)
+
+___
+
 # Установка
 * Скачиваем архив
 * Распаковываем в удобную нам директорию
@@ -6,7 +10,8 @@
 * Запускаем установку доп. компонентов: python Install.py
 
 # Запуск
-* Вводим в Terminal: python "HZF Download Manager V3.1 - CMD.py"
+* CMD - Вводим в Terminal: python "HZF Download Manager V3.1 - CMD.py"
+* GUI - Вводим в Terminal: python "HZF Download Manager V3.1 - Tinker.pyw"
 
 # Важная информация
 * Download Manager работает только на Windows
@@ -16,4 +21,12 @@
 
 # Меню
 
-![Снимок (1)](https://user-images.githubusercontent.com/64781822/158377758-7ae5ba5f-bd25-43be-b67e-d0d2932e9fdb.png)
+![image](https://user-images.githubusercontent.com/64781822/188154783-0ed0a302-bc57-42eb-8ef4-096cc629cfb8.png)
+![image (1)](https://user-images.githubusercontent.com/64781822/188155189-964521d7-f956-4c76-b678-a937178ebebd.png)
+
+#
+___
+# 💰Поддержать проект:
+
++ #### **QIWI Кошелёк**
+  + [**`Перевод по никнейму`**](https://qiwi.com/n/AVENCORESDONATE)
