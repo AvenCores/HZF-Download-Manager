@@ -22,7 +22,6 @@
 ![image](https://user-images.githubusercontent.com/64781822/188154783-0ed0a302-bc57-42eb-8ef4-096cc629cfb8.png)
 ![image (1)](https://user-images.githubusercontent.com/64781822/188155189-964521d7-f956-4c76-b678-a937178ebebd.png)
 
-#
 ___
 # 💰Поддержать проект:
 
