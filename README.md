@@ -14,9 +14,6 @@
 # Важная информация
 * Download Manager работает только на Windows
 
-# Telegram Channel
-* У Download Manager есть свой Telegram-канал! @hzfnews
-
 # Меню
 
 ![image](https://user-images.githubusercontent.com/64781822/188154783-0ed0a302-bc57-42eb-8ef4-096cc629cfb8.png)
