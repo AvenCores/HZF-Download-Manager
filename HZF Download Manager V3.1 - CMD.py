@@ -185,20 +185,21 @@ while True:
 | |_| |\ V  V /   | |  | | (_| | | | | (_| | (_| |  __/ |
 |____/  \_/\_/    |_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|
                                             |___/
+YouTube Channel: youtube.com/c/HZFYT
 Telegram Channel: t.me/hzfnews
 VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V2.0\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n8 - Скачать HZF ORION Bomber\n9 - Скачать Скачать Upgrade pip modules V1.0\n\n99 - Важная информация!\n\n0 - Выход\n")
+    menu = input("Неподдерживаемое\n" + "1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF csgo external cheats V1.1\n\n" + "Поддерживаемое\n" + "6 - Скачать HZF Weather in your city V2.0\n7 - Скачать HZF Downloader Proxy V1.0\n8 - Скачать HZF ORION Bomber V1.5\n9 - Скачать Скачать Upgrade pip modules V1.0" + "\n\n99 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
     if menu == "3": installVkTok()
     if menu == "4": installWinControl()
-    if menu == "5": installWeather()
-    if menu == "6": installproxyinst()
-    if menu == "7": installCsExCheat()
+    if menu == "5": installCsExCheat()
+    if menu == "6": installWeather()
+    if menu == "7": installproxyinst()
     if menu == "8": installHZFORIONBomber()
     if menu == "9": installpipupgrade()
     if menu == "99": info()
