@@ -1,7 +1,7 @@
 import os
 import requests
 
-version = 3.0
+version = 3.1
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -158,6 +158,20 @@ def installHZFORIONBomber():
             print(banner+"\nHZF ORION Bomber был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input()
 
+def installpipupgrade():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF-ORION-Bomber.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/Upgrade-pip-modules/archive/refs/heads/main.zip")
+            f.write(ufr.content)
+            f.close()
+            print(banner+"\nUpgrade pip modules был скачен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
+
 def info():
     global banner, version
     print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
@@ -176,7 +190,7 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V2.0\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n8 - Скачать HZF ORION Bomber\n\n99 - Важная информация!\n\n0 - Выход\n")
+    menu = input("1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF Weather in your city V2.0\n6 - Скачать HZF Downloader Proxy V1.0\n7 - Скачать HZF csgo external cheats V1.1\n8 - Скачать HZF ORION Bomber\n9 - Скачать Скачать Upgrade pip modules V1.0\n\n99 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
@@ -186,4 +200,5 @@ VK: vk.com/hzforum1
     if menu == "6": installproxyinst()
     if menu == "7": installCsExCheat()
     if menu == "8": installHZFORIONBomber()
+    if menu == "9": installpipupgrade()
     if menu == "99": info()

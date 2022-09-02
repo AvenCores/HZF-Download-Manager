@@ -4,8 +4,8 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V3.0')
-root.geometry('380x350')
+root.title('Download Manager V3.1')
+root.geometry('540x370')
 root.resizable(width=False, height=False)
 
 def installSMS():
@@ -146,33 +146,57 @@ def installHZFORIONBomber():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='HZF ORION Bomber был скачен в папку C:\HZF Project')
+            messagebox.showinfo(title="Удачно", message='HZF ORION Bomber был скачен в папку C:\HZF Project')     
+
+def installpipupgrade():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/Upgrade-pip-modules.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/Upgrade-pip-modules/archive/refs/heads/main.zip")
+            f.write(ufr.content)
+            f.close()
+            messagebox.showinfo(title="Удачно", message='Upgrade pip modules был скачен в папку C:\HZF Project')     
+
+poetry = 'Неподдерживаемое'
+label3 = Label(text=poetry, font='bold', fg='red', justify=CENTER)
+label3.place(x=11, y=20)
+
+poetry = 'Поддерживаемое'
+label3 = Label(text=poetry, font='bold', fg='blue', justify=CENTER)
+label3.place(x=330, y=20)
 
 file = Button(text='Скачать HZF Bomber V1.4', command=installSMS)
-file.place(x=11, y=26)
+file.place(x=11, y=60)
 
 file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
-file.place(x=11, y=63)
-
-file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
 file.place(x=11, y=100)
 
+file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
+file.place(x=11, y=140)
+
 file = Button(text='HZF Windows Control V1.0', command=installWinControl)
-file.place(x=11, y=137)
+file.place(x=11, y=180)
 
 file = Button(text='HZF Weather in your city V2.0', command=installWeather)
-file.place(x=11, y=174)
+file.place(x=330, y=100)
 
 file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installproxyinst)
-file.place(x=11, y=211)
+file.place(x=330, y=140)
 
 file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
-file.place(x=11, y=248)
+file.place(x=11, y=220)
 
-file = Button(text='Скачать HZF ORION Bomber', command=installHZFORIONBomber)
-file.place(x=11, y=285)
+file = Button(text='Скачать HZF ORION Bomber V1.5', command=installHZFORIONBomber)
+file.place(x=330, y=60)
 
-poetry = 'Downloader Manager V3.0 by HZF'
+file = Button(text='Скачать Upgrade pip modules V1.0', command=installpipupgrade)
+file.place(x=330, y=180)
+
+poetry = 'Downloader Manager V3.1 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
-label3.place(x=180, y=320)
+label3.place(x=160, y=350)
 root.mainloop()
