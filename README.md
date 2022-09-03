@@ -5,22 +5,19 @@
 * Распаковываем в удобную нам директорию
 * Запускаем Terminal
 * Переходим в корень с программой
-* Запускаем установку доп. компонентов: python Install.py
+* Запускаем установку доп. компонентов: **python Install.py**
 
 # Запуск
-* CMD - Вводим в Terminal: python "HZF Download Manager V3.1 - CMD.py"
-* GUI - Вводим в Terminal: python "HZF Download Manager V3.1 - Tinker.pyw"
+* CMD - Вводим в Terminal: **python "HZF Download Manager V3.2 - CMD.py"**
+* GUI - Вводим в Terminal: **python "HZF Download Manager V3.2 - Tinker.pyw"**
 
 # Важная информация
 * Download Manager работает только на Windows
 
-# Telegram Channel
-* У Download Manager есть свой Telegram-канал! @hzfnews
-
 # Меню
 
-![image](https://user-images.githubusercontent.com/64781822/188154783-0ed0a302-bc57-42eb-8ef4-096cc629cfb8.png)
-![image (1)](https://user-images.githubusercontent.com/64781822/188155189-964521d7-f956-4c76-b678-a937178ebebd.png)
+![image](https://i.imgur.com/TShcETO.pngb)
+![image (1)](https://i.imgur.com/JAJPPE8.png)
 
 ___
 # 💰Поддержать проект:

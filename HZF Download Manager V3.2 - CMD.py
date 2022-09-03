@@ -1,12 +1,7 @@
 import os
-from tkinter import *
-from tkinter import messagebox
 import requests
 
-root = Tk()
-root.title('Download Manager V3.1')
-root.geometry('540x370')
-root.resizable(width=False, height=False)
+version = 3.2
 
 def installSMS():
             path = 'c:/HZF Project'
@@ -25,7 +20,9 @@ def installSMS():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='SMS Bomber был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nSMS Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installVkTok():
             path = 'c:/HZF Project'
@@ -44,7 +41,9 @@ def installVkTok():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='Token Manager был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nToken Manager был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installEmail():
             path = 'c:/HZF Project'
@@ -57,7 +56,9 @@ def installEmail():
             ufr = requests.get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
             f.write(ufr.content)
             f.close()
-            messagebox.showinfo(title="Удачно", message='Email Bomber был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nEmail Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installWinControl():
             path = 'c:/HZF Project'
@@ -70,7 +71,9 @@ def installWinControl():
             ufr = requests.get("https://github.com/AvenCores/HZF-Windows-Control/releases/download/V1.0/Windows.Control.V1.0.zip")
             f.write(ufr.content)
             f.close()
-            messagebox.showinfo(title="Удачно", message='Windows Control был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nWindows Control был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installWeather():
             path = 'c:/HZF Project'
@@ -89,7 +92,9 @@ def installWeather():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='Weather in your city был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nWeather in your city был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installproxyinst():
             path = 'c:/HZF Project'
@@ -108,7 +113,9 @@ def installproxyinst():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='HZF Downloader Proxy был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nHZF Downloader Proxy был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installCsExCheat():
             path = 'c:/HZF Project'
@@ -127,7 +134,9 @@ def installCsExCheat():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='HZF csgo external cheats был скачен в папку C:\HZF Project')
+            global banner
+            print(banner+"\nHZF csgo external cheats был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installHZFORIONBomber():
             path = 'c:/HZF Project'
@@ -146,7 +155,8 @@ def installHZFORIONBomber():
             for i in range(len(bib)):
                 os.system("pip3 install "+bib[i])
             os.system('cls')
-            messagebox.showinfo(title="Удачно", message='HZF ORION Bomber был скачен в папку C:\HZF Project')     
+            print(banner+"\nHZF ORION Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
 def installpipupgrade():
             path = 'c:/HZF Project'
@@ -155,48 +165,62 @@ def installpipupgrade():
             except OSError as error:
                 False
             os.system('cls')
-            f=open(r'c:/HZF Project/Upgrade-pip-modules.zip', "wb")
+            f=open(r'c:/HZF Project/HZF-ORION-Bomber.zip', "wb")
             ufr = requests.get("https://github.com/AvenCores/Upgrade-pip-modules/archive/refs/heads/main.zip")
             f.write(ufr.content)
             f.close()
-            messagebox.showinfo(title="Удачно", message='Upgrade pip modules был скачен в папку C:\HZF Project')     
+            print(banner+"\nUpgrade pip modules был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input()
 
-poetry = 'Неподдерживаемое'
-label3 = Label(text=poetry, font='bold', fg='red', justify=CENTER)
-label3.place(x=11, y=20)
+def installhzftkclock():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/HZF-Tk-Clock.zip', "wb")
+            ufr = requests.get("https://github.com/AvenCores/HZF-Tk-Clock/archive/refs/heads/main.zip")
+            f.write(ufr.content)
+            f.close()
 
-poetry = 'Поддерживаемое'
-label3 = Label(text=poetry, font='bold', fg='blue', justify=CENTER)
-label3.place(x=330, y=20)
+            os.system("pip3 install --upgrade pip")
+            bib = ["tk"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            print(banner+"\nHZF Tk Clock был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input() 
 
-file = Button(text='Скачать HZF Bomber V1.4', command=installSMS)
-file.place(x=11, y=60)
+def info():
+    global banner, version
+    print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
+    input()
 
-file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
-file.place(x=11, y=100)
+while True:
+    banner = ("\n" * 100)+ """
+ ______        __  __  __
+|  _ \ \      / / |  \/  | __ _ _ __   __ _  __ _  ___ _ __
+| | | \ \ /\ / /  | |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '__|
+| |_| |\ V  V /   | |  | | (_| | | | | (_| | (_| |  __/ |
+|____/  \_/\_/    |_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|
+                                            |___/
+YouTube Channel: youtube.com/c/HZFYT
+Telegram Channel: t.me/hzfnews
+VK: vk.com/hzforum1
+    """
 
-file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
-file.place(x=11, y=140)
-
-file = Button(text='HZF Windows Control V1.0', command=installWinControl)
-file.place(x=11, y=180)
-
-file = Button(text='HZF Weather in your city V2.0', command=installWeather)
-file.place(x=330, y=100)
-
-file = Button(text='Скачать HZF Downloader Proxy V1.0', command=installproxyinst)
-file.place(x=330, y=140)
-
-file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
-file.place(x=11, y=220)
-
-file = Button(text='Скачать HZF ORION Bomber V1.5', command=installHZFORIONBomber)
-file.place(x=330, y=60)
-
-file = Button(text='Скачать Upgrade pip modules V1.0', command=installpipupgrade)
-file.place(x=330, y=180)
-
-poetry = 'Downloader Manager V3.1 by HZF'
-label3 = Label(text=poetry, justify=CENTER)
-label3.place(x=160, y=350)
-root.mainloop()
+    print(banner)
+    menu = input("Неподдерживаемое\n" + "1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF csgo external cheats V1.1\n\n" + "Поддерживаемое\n" + "6 - Скачать HZF Weather in your city V2.0\n7 - Скачать HZF Downloader Proxy V1.0\n8 - Скачать HZF ORION Bomber V1.5\n9 - Скачать Upgrade pip modules V1.0\n10 - Скачать HZF Tk Clock V1.0" + "\n\n99 - Важная информация!\n\n0 - Выход\n")
+    if menu == "0": exit()
+    if menu == "1": installSMS()
+    if menu == "2": installEmail()
+    if menu == "3": installVkTok()
+    if menu == "4": installWinControl()
+    if menu == "5": installCsExCheat()
+    if menu == "6": installWeather()
+    if menu == "7": installproxyinst()
+    if menu == "8": installHZFORIONBomber()
+    if menu == "9": installpipupgrade()
+    if menu == "10": installhzftkclock()
+    if menu == "99": info()
