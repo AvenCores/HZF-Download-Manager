@@ -16,8 +16,8 @@
 
 # Меню
 
-![image](https://i.imgur.com/TShcETO.pngb)
-![image (1)](https://i.imgur.com/JAJPPE8.png)
+![image](https://user-images.githubusercontent.com/64781822/188499176-2cc79e6d-d932-4818-a322-a7847df50ce5.png)
+![image](https://user-images.githubusercontent.com/64781822/188499188-e971f8c8-77b5-414c-8f4a-c9525e6c5904.png)
 
 ___
 # 💰Поддержать проект:
