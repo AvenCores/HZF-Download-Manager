@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 root = Tk()
-root.title('Download Manager V3.2')
+root.title('Download Manager V3.3')
 root.geometry('540x370')
 root.resizable(width=False, height=False)
 
@@ -180,6 +180,25 @@ def installhzftkclock():
             os.system('cls')
             messagebox.showinfo(title="Удачно", message='HZF Tk Clock был загружен в папку C:\HZF Project')    
 
+def installtgavadwnld():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/TG-AVA-DOWNLOAD.zip', "wb")
+            ufr = requests.get("https://github.com/mr-mar493/tg-ava-download/archive/refs/heads/main.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["Telethon"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            messagebox.showinfo(title="Удачно", message='TG AVA DOWNLOAD был загружен в папку C:\HZF Project')    
+
 poetry = 'Неподдерживаемое'
 label3 = Label(text=poetry, font='bold', fg='red', justify=CENTER)
 label3.place(x=11, y=20)
@@ -218,7 +237,10 @@ file.place(x=330, y=180)
 file = Button(text='Скачать HZF Tk Clock V1.0', command=installhzftkclock)
 file.place(x=330, y=220)
 
-poetry = 'Downloader Manager V3.2 by HZF'
+file = Button(text='Скачать TG AVA DOWNLOAD V1.0', command=installtgavadwnld)
+file.place(x=330, y=260)
+
+poetry = 'Downloader Manager V3.3 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=160, y=350)
 root.mainloop()

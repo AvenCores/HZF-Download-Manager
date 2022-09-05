@@ -192,6 +192,26 @@ def installhzftkclock():
             print(banner+"\nHZF Tk Clock был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
             input() 
 
+def installtgavadwnld():
+            path = 'c:/HZF Project'
+            try:
+                os.mkdir(path)
+            except OSError as error:
+                False
+            os.system('cls')
+            f=open(r'c:/HZF Project/TG-AVA-DOWNLOAD.zip', "wb")
+            ufr = requests.get("https://github.com/mr-mar493/tg-ava-download/archive/refs/heads/main.zip")
+            f.write(ufr.content)
+            f.close()
+
+            os.system("pip3 install --upgrade pip")
+            bib = ["Telethon"]
+            for i in range(len(bib)):
+                os.system("pip3 install "+bib[i])
+            os.system('cls')
+            print(banner+"\nTG AVA DOWNLOAD был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+            input() 
+
 def info():
     global banner, version
     print(banner+"\nВерсия "+str(version)+"\n\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @avencores\n\nНажмите ENTER чтобы выйти")
@@ -211,7 +231,7 @@ VK: vk.com/hzforum1
     """
 
     print(banner)
-    menu = input("Неподдерживаемое\n" + "1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF csgo external cheats V1.1\n\n" + "Поддерживаемое\n" + "6 - Скачать HZF Weather in your city V2.0\n7 - Скачать HZF Downloader Proxy V1.0\n8 - Скачать HZF ORION Bomber V1.5\n9 - Скачать Upgrade pip modules V1.0\n10 - Скачать HZF Tk Clock V1.0" + "\n\n99 - Важная информация!\n\n0 - Выход\n")
+    menu = input("Неподдерживаемое\n" + "1 - Скачать HZF Bomber V1.4\n2 - Скачать HZF Email Bomber V1.1\n3 - Скачать HZF_VK_DIALOG_TOKEN\n4 - Скачать HZF Windows Control V1.0\n5 - Скачать HZF csgo external cheats V1.1\n\n" + "Поддерживаемое\n" + "6 - Скачать HZF Weather in your city V2.0\n7 - Скачать HZF Downloader Proxy V1.0\n8 - Скачать HZF ORION Bomber V1.5\n9 - Скачать Upgrade pip modules V1.0\n10 - Скачать HZF Tk Clock V1.0\n11 - Скачать TG AVA DOWNLOAD V1.0" + "\n\n99 - Важная информация!\n\n0 - Выход\n")
     if menu == "0": exit()
     if menu == "1": installSMS()
     if menu == "2": installEmail()
@@ -223,4 +243,5 @@ VK: vk.com/hzforum1
     if menu == "8": installHZFORIONBomber()
     if menu == "9": installpipupgrade()
     if menu == "10": installhzftkclock()
+    if menu == "11": installtgavadwnld()
     if menu == "99": info()
