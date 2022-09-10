@@ -14,7 +14,7 @@
 # Меню
 
 ![image](https://i.imgur.com/wYJy0DE.png)
-![image](https://i.imgur.com/kZEAyvt.png)
+![image](https://i.imgur.com/EVXeY88.png)
 
 ___
 # 💰Поддержать проект:

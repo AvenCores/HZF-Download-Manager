@@ -439,9 +439,9 @@ while True:
     """, "green")
     banner2 = colored("[", "blue")+"Developers      :"+colored("HZF", "green")
     banner3 = colored("[", "blue")+"Version         :"+colored(version, "red")
-    banner4 = colored("[", "blue")+"Telegram Channel:"+colored("@hzfnews", "cyan")+colored("   <-- Подпишись!", "green")
+    banner4 = colored("[", "blue")+"Telegram Channel:"+colored("@hzfnews", "cyan")+colored("              <-- Подпишись!", "green")
     banner5 = colored("[", "blue")+"YouTube Channel :"+colored("youtube.com/c/HZFYT", "cyan")+colored("   <-- Подпишись!", "green")
-    banner6 = colored("[", "blue")+"VK              :"+colored("vk.com/hzforum1", "cyan")+colored("   <-- Подпишись!", "green")+"\n"
+    banner6 = colored("[", "blue")+"VK              :"+colored("vk.com/hzforum1", "cyan")+colored("       <-- Подпишись!", "green")+"\n"
 
     print(banner)
     print(banner2)
