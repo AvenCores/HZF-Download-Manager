@@ -1,11 +1,14 @@
 from os import system,mkdir,name
-from turtle import color
-from requests import get
+from tkinter import *
+from tkinter import messagebox
 from sys import platform
+from requests import get
 from pathlib import Path
-from termcolor import colored
 
-version = 3.5
+root = Tk()
+root.title('Download Manager V3.6')
+root.geometry('600x374')
+root.resizable(width=False, height=False)
 
 def installSMS():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -21,14 +24,7 @@ def installSMS():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='HZF SMS Bomber был загружен в папку $HOME\HZF Project')   
             
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -46,8 +42,7 @@ def installSMS():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='SMS Bomber был загружен в папку C:\HZF Project')
 
 def installVkTok():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -63,14 +58,7 @@ def installVkTok():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input() 
+                messagebox.showinfo(title="Удачно", message='Token Manager был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -88,8 +76,7 @@ def installVkTok():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Token Manager был загружен в папку C:\HZF Project')
 
 def installEmail():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -102,14 +89,7 @@ def installEmail():
                 system("mv HZF\ Project $HOME")
                 system("pip3 install --upgrade pip")
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Email Bomber был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -122,19 +102,11 @@ def installEmail():
                 ufr = get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Email Bomber был загружен в папку C:\HZF Project')
 
 def installWinControl():
             if platform == "linux" or platform == "linux2" or platform == "unix":
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWindows Control не поддерживает ваше систему!")
-                input()
+                messagebox.showinfo(title="Ошибка", message='Windows Control не поддерживает ваше систему!')
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -147,8 +119,7 @@ def installWinControl():
                 ufr = get("https://github.com/AvenCores/HZF-Windows-Control/releases/download/V1.0/Windows.Control.V1.0.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWindows Control был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Windows Control был загружен в папку C:\HZF Project')
 
 def installWeather():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -166,14 +137,7 @@ def installWeather():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Weather in your city был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -191,19 +155,25 @@ def installWeather():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Weather in your city был загружен в папку C:\HZF Project')
 
 def installproxyinst():
             if platform == "linux" or platform == "linux2" or platform == "unix":
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy не поддерживает ваше систему!")
-                input()
+                Path("HZF Project").mkdir(parents=True, exist_ok=True)
+                system('cls' if name == 'nt' else 'clear')
+                f=open(r'HZF Project/HZF Downloader Proxy.zip', "wb")
+                ufr = get("https://github.com/AvenCores/HZF-Downloader-Proxy/archive/refs/heads/main.zip")
+                f.write(ufr.content)
+                f.close()
+                system("mv HZF\ Project $HOME")
+                system("pip3 install --upgrade pip")
+                system('cls' if name == 'nt' else 'clear')
+                system("pip3 install --upgrade pip")
+                bib = ["requests", "termcolor"]
+                for i in range(len(bib)):
+                    system("pip3 install "+bib[i])
+                system('cls' if name == 'nt' else 'clear')
+                messagebox.showinfo(title="Удачно", message='HZF Downloader Proxy был загружен в папку $HOME\HZF Project')
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -213,27 +183,19 @@ def installproxyinst():
                     False
                 system('cls' if name == 'nt' else 'clear')
                 f=open(r'c:/HZF Project/HZF Downloader Proxy.zip', "wb")
-                ufr = get("https://github.com/AvenCores/HZF-Downloader-Proxy/releases/download/V1.0/HZF.Downloader.Proxy.V1.0.zip")
+                ufr = get("https://github.com/AvenCores/HZF-Downloader-Proxy/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
                 system("pip3 install --upgrade pip")
-                bib = ["requests"]
+                bib = ["requests", "termcolor"]
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='HZF Downloader Proxy был загружен в папку C:\HZF Project')
 
 def installCsExCheat():
             if platform == "linux" or platform == "linux2" or platform == "unix":
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF csgo external cheats не поддерживает ваше систему!")
-                input()
+                messagebox.showinfo(title="Ошибка", message='Windows Control не поддерживает ваше систему!')
                 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -251,8 +213,7 @@ def installCsExCheat():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF csgo external cheats был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='HZF csgo external cheats был загружен в папку C:\HZF Project')
 
 def installHZFORIONBomber():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -270,14 +231,7 @@ def installHZFORIONBomber():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='HZF ORION Bomber был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -295,8 +249,7 @@ def installHZFORIONBomber():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='HZF ORION Bomber был загружен в папку C:\HZF Project')     
 
 def installpipupgrade():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -309,14 +262,7 @@ def installpipupgrade():
                 system("mv HZF\ Project $HOME")
                 system("pip3 install --upgrade pip")
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Upgrade pip modules был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -329,8 +275,7 @@ def installpipupgrade():
                 ufr = get("https://github.com/AvenCores/Upgrade-pip-modules/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()
+                messagebox.showinfo(title="Удачно", message='Upgrade pip modules был загружен в папку C:\HZF Project')     
 
 def installhzftkclock():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -348,14 +293,7 @@ def installhzftkclock():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()   
+                messagebox.showinfo(title="Удачно", message='HZF Tk Clock был загружен в папку $HOME\HZF Project')   
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -373,8 +311,7 @@ def installhzftkclock():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input() 
+                messagebox.showinfo(title="Удачно", message='HZF Tk Clock был загружен в папку C:\HZF Project')    
 
 def installtgavadwnld():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -390,14 +327,7 @@ def installtgavadwnld():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                global banner
-                global banner2
-                global banner3
-                global banner4
-                global banner5
-                global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input()   
+                messagebox.showinfo(title="Удачно", message='TG AVA DOWNLOAD был загружен в папку $HOME\HZF Project')    
 
             elif platform == "win32":
                 path = 'c:/HZF Project'
@@ -415,51 +345,50 @@ def installtgavadwnld():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
-                input() 
+                messagebox.showinfo(title="Удачно", message='TG AVA DOWNLOAD был загружен в папку C:\HZF Project')    
 
-def info():
-    global banner
-    global banner2
-    global banner3
-    global banner4
-    global banner5
-    global banner6
-    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @hzfnews\n\nНажмите ENTER чтобы выйти")
-    input()
+poetry = 'Неподдерживаемое'
+label3 = Label(text=poetry, font='bold', fg='red', justify=CENTER)
+label3.place(x=11, y=20)
 
-while True:
-    banner = ("\n" * 100) + colored("""
-██████╗ ██╗    ██╗    ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗ 
-██╔══██╗██║    ██║    ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗
-██║  ██║██║ █╗ ██║    ██╔████╔██║███████║██╔██╗ ██║███████║██║  ███╗█████╗  ██████╔╝
-██║  ██║██║███╗██║    ██║╚██╔╝██║██╔══██║██║╚██╗██║██╔══██║██║   ██║██╔══╝  ██╔══██╗
-██████╔╝╚███╔███╔╝    ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║╚██████╔╝███████╗██║  ██║
-╚═════╝  ╚══╝╚══╝     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
-    """, "green")
-    banner2 = colored("[", "blue")+"Developers      :"+colored("HZF", "green")
-    banner3 = colored("[", "blue")+"Version         :"+colored(version, "red")
-    banner4 = colored("[", "blue")+"Telegram Channel:"+colored("@hzfnews", "cyan")+colored("              <-- Подпишись!", "green")
-    banner5 = colored("[", "blue")+"YouTube Channel :"+colored("youtube.com/c/HZFYT", "cyan")+colored("   <-- Подпишись!", "green")
-    banner6 = colored("[", "blue")+"VK              :"+colored("vk.com/hzforum1", "cyan")+colored("       <-- Подпишись!", "green")+"\n"
+poetry = 'Поддерживаемое'
+label3 = Label(text=poetry, font='bold', fg='blue', justify=CENTER)
+label3.place(x=330, y=20)
 
-    print(banner)
-    print(banner2)
-    print(banner3)
-    print(banner4)
-    print(banner5)
-    print(banner6)
-    menu = input(colored("Неподдерживаемое\n", "red") + colored("1 ", "cyan") + "- Скачать HZF Bomber V1.4\n" + colored("2 ", "cyan") + "- Скачать HZF Email Bomber V1.1\n" + colored("3 ", "cyan") + "- Скачать HZF_VK_DIALOG_TOKEN\n" + colored("4 ", "cyan") + "- Скачать HZF Windows Control V1.0\n" + colored("5 ", "cyan") + "- Скачать HZF csgo external cheats V1.1\n\n" + colored("Поддерживаемое\n", "blue") +colored("6 ", "cyan") + "- Скачать HZF Weather in your city V2.0\n" + colored("7 ", "cyan") +  "- Скачать HZF Downloader Proxy V1.0\n" + colored("8 ", "cyan") + "- Скачать HZF ORION Bomber V1.5\n"  + colored("9 ", "cyan") + "- Скачать Upgrade pip modules V1.0\n" + colored("10 ", "cyan") +  "- Скачать HZF Tk Clock V1.0\n" + colored("11 ", "cyan") +  "- Скачать TG AVA DOWNLOAD V1.0" + "\n\n" + colored("99 ", "cyan") + "- Важная информация!\n\n" + colored("0 ", "cyan") + "- Выход\n")
-    if menu == "0": exit()
-    if menu == "1": installSMS()
-    if menu == "2": installEmail()
-    if menu == "3": installVkTok()
-    if menu == "4": installWinControl()
-    if menu == "5": installCsExCheat()
-    if menu == "6": installWeather()
-    if menu == "7": installproxyinst()
-    if menu == "8": installHZFORIONBomber()
-    if menu == "9": installpipupgrade()
-    if menu == "10": installhzftkclock()
-    if menu == "11": installtgavadwnld()
-    if menu == "99": info()
+file = Button(text='Скачать HZF Bomber V1.4', command=installSMS)
+file.place(x=11, y=60)
+
+file = Button(text='Скачать HZF Email Bomber V1.1', command=installEmail)
+file.place(x=11, y=100)
+
+file = Button(text='Скачать HZF_VK_DIALOG_TOKEN', command=installVkTok)
+file.place(x=11, y=140)
+
+file = Button(text='HZF Windows Control V1.0', command=installWinControl)
+file.place(x=11, y=180)
+
+file = Button(text='HZF Weather in your city V2.0', command=installWeather)
+file.place(x=330, y=100)
+
+file = Button(text='Скачать HZF Downloader Proxy V2.0', command=installproxyinst)
+file.place(x=330, y=140)
+
+file = Button(text='Скачать HZF csgo external cheats V1.1', command=installCsExCheat)
+file.place(x=11, y=220)
+
+file = Button(text='Скачать HZF ORION Bomber V1.5', command=installHZFORIONBomber)
+file.place(x=330, y=60)
+
+file = Button(text='Скачать Upgrade pip modules V1.0', command=installpipupgrade)
+file.place(x=330, y=180)
+
+file = Button(text='Скачать HZF Tk Clock V1.0', command=installhzftkclock)
+file.place(x=330, y=220)
+
+file = Button(text='Скачать TG AVA DOWNLOAD V1.0', command=installtgavadwnld)
+file.place(x=330, y=260)
+
+poetry = 'Downloader Manager V3.6 by HZF'
+label3 = Label(text=poetry, justify=CENTER)
+label3.place(x=160, y=350)
+root.mainloop()
