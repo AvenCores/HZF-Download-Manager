@@ -5,7 +5,7 @@ from sys import platform
 from pathlib import Path
 from termcolor import colored
 
-version = 3.6
+version = "3.6.1"
 
 def installSMS():
             if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -27,7 +27,7 @@ def installSMS():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
             
             elif platform == "win32":
@@ -46,7 +46,7 @@ def installSMS():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nSMS Bomber был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installVkTok():
@@ -69,7 +69,7 @@ def installVkTok():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input() 
 
             elif platform == "win32":
@@ -88,7 +88,7 @@ def installVkTok():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nToken Manager был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installEmail():
@@ -108,7 +108,7 @@ def installEmail():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
             elif platform == "win32":
@@ -122,7 +122,7 @@ def installEmail():
                 ufr = get("https://github.com/AvenCores/HZF-Email-Bomber/releases/download/V1.1/Email.Bomber.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nEmail Bomber был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installWinControl():
@@ -147,7 +147,7 @@ def installWinControl():
                 ufr = get("https://github.com/AvenCores/HZF-Windows-Control/releases/download/V1.0/Windows.Control.V1.0.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWindows Control был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWindows Control был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installWeather():
@@ -172,7 +172,7 @@ def installWeather():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
             elif platform == "win32":
@@ -191,7 +191,7 @@ def installWeather():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nWeather in your city был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installproxyinst():
@@ -216,7 +216,7 @@ def installproxyinst():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
             elif platform == "win32":
@@ -235,7 +235,7 @@ def installproxyinst():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Downloader Proxy был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installCsExCheat():
@@ -265,7 +265,7 @@ def installCsExCheat():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF csgo external cheats был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF csgo external cheats был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installHZFORIONBomber():
@@ -290,7 +290,7 @@ def installHZFORIONBomber():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
             elif platform == "win32":
@@ -309,7 +309,7 @@ def installHZFORIONBomber():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF ORION Bomber был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installpipupgrade():
@@ -329,7 +329,7 @@ def installpipupgrade():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
             elif platform == "win32":
@@ -343,7 +343,7 @@ def installpipupgrade():
                 ufr = get("https://github.com/AvenCores/Upgrade-pip-modules/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nUpgrade pip modules был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()
 
 def installhzftkclock():
@@ -368,7 +368,7 @@ def installhzftkclock():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()   
 
             elif platform == "win32":
@@ -387,7 +387,7 @@ def installhzftkclock():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nHZF Tk Clock был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input() 
 
 def installtgavadwnld():
@@ -410,7 +410,7 @@ def installtgavadwnld():
                 global banner4
                 global banner5
                 global banner6
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку $HOME\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()   
 
             elif platform == "win32":
@@ -429,7 +429,7 @@ def installtgavadwnld():
                 for i in range(len(bib)):
                     system("pip3 install "+bib[i])
                 system('cls' if name == 'nt' else 'clear')
-                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку C:\HZF Project.\n\nНажмите ENTER для выхода в главное меню")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nTG AVA DOWNLOAD был загружен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input() 
 
 def info():
@@ -439,7 +439,7 @@ def info():
     global banner4
     global banner5
     global banner6
-    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nЗа все действия с программой отвечаете только вы!\n\nСоздатель Telegram - @hzfnews\n\nНажмите ENTER чтобы выйти")
+    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nАвтор данной утилиты не несет никакой ответственности за проделлание вами действия, все продукт команды HZF предостовляются только в азнокомительных целях!\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
     input()
 
 while True:

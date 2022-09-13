@@ -9,12 +9,12 @@
 
 # Запуск
 * CMD - Вводим в Terminal: **python "HZF Download Manager V3.6 - Terminal.py"**
-* GUI - Вводим в Terminal: **python "HZF Download Manager V3.6 - Tinker.pyw"**
+* GUI - Вводим в Terminal: **python "HZF Download Manager V3.6.1 - Tinker.pyw"**
 
 # Меню
 
 ![image](https://i.imgur.com/xHmVwmO.png)
-![image](https://i.imgur.com/8lYUp3H.png)
+![image](https://i.imgur.com/9jwqmkC.png)
 
 ___
 # 💰Поддержать проект:
