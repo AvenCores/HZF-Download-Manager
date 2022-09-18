@@ -8,13 +8,13 @@
 * Запускаем установку доп. компонентов: **python Install.py**
 
 # Запуск
-* CMD - Вводим в Terminal: **python "HZF Download Manager V3.6.1 - Terminal.py"**
-* GUI - Вводим в Terminal: **python "HZF Download Manager V3.6 - Tinker.pyw"**
+* CMD - Вводим в Terminal: **python "HZF Download Manager V3.7 - Terminal.py"**
+* GUI - Вводим в Terminal: **python "HZF Download Manager V3.7 - Tinker.pyw"**
 
 # Меню
 
-![image](https://i.imgur.com/xHmVwmO.png)
-![image](https://i.imgur.com/9jwqmkC.png)
+![image](https://i.imgur.com/hA3QkL7.png)
+![image](https://i.imgur.com/Z8NvAm2.png)
 
 ___
 # 💰Поддержать проект:
