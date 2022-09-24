@@ -1,12 +1,11 @@
+from tkinter import Tk,Label,CENTER,Button,messagebox
 from os import system,mkdir,name
-from tkinter import *
-from tkinter import messagebox
 from sys import platform
 from requests import get
 from pathlib import Path
 
 root = Tk()
-root.title('Download Manager V3.7')
+root.title('Download Manager V3.8')
 root.geometry('600x374')
 root.resizable(width=False, height=False)
 
@@ -382,13 +381,13 @@ file.place(x=330, y=60)
 file = Button(text='Скачать Upgrade pip modules V1.0', command=installpipupgrade)
 file.place(x=330, y=180)
 
-file = Button(text='Скачать HZF Tk Clock V1.0', command=installhzftkclock)
+file = Button(text='Скачать HZF Tk Clock V2.1', command=installhzftkclock)
 file.place(x=330, y=220)
 
 file = Button(text='Скачать TG AVA DOWNLOAD V2.0', command=installtgavadwnld)
 file.place(x=330, y=260)
 
-poetry = 'Downloader Manager V3.7 by HZF'
+poetry = 'Downloader Manager V3.8 by HZF'
 label3 = Label(text=poetry, justify=CENTER)
 label3.place(x=160, y=350)
 root.mainloop()
