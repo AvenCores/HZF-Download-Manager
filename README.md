@@ -13,8 +13,8 @@
 
 # Меню
 
-![image](https://i.imgur.com/M4BtvRz.png)
-![image](https://i.imgur.com/Yapnx8y.png)
+![tk](https://i.imgur.com/OEBdeu3.png)
+![cmd](https://i.imgur.com/duMrHQS.png)
 
 ___
 # 💰Поддержать проект:
