@@ -5,7 +5,7 @@
 * Распаковываем в удобную нам директорию
 * Запускаем Terminal
 * Переходим в корень с программой
-* Запускаем установку доп. компонентов: **python "Install - Terminal.py"** / **python "Install - Tinker"**
+* Запускаем установку доп. компонентов: **python "Install - Terminal.py"** / **python "Install - Tinker.py"**
 
 # Запуск
 * CMD - Вводим в Terminal: **python "HZF Download Manager V4.6 - Terminal.py"** / **"HZF Download Manager V4.6 - Terminal.exe"**
