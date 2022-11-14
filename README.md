@@ -3,17 +3,18 @@
 # Установка
 * Скачиваем архив
 * Распаковываем в удобную нам директорию
+* Устанавливаем все шрифты из директории **Fonts**
 * Запускаем Terminal
 * Переходим в корень с программой
 * Запускаем установку доп. компонентов: **python "Install-Terminal.py"** / **python "Install-Tinker.py"**
 
 # Запуск
-* CMD - Вводим в Terminal: **python "HZF-Download-Manager-V4.8-Terminal.py"** / **"HZF-Download-Manager-V4.8-Terminal.exe"**
-* GUI - Вводим в Terminal: **python "HZF-Download-Manager-V4.8-Tinker.pyw"** / **"HZF-Download-Manager-V4.8-Tinker.exe"**
+* CMD - Вводим в Terminal: **python "HZF-Download-Manager-Terminal-V4.9.py"** / **"HZF-Download-Manager-Terminal-V4.9.exe"**
+* GUI - Вводим в Terminal: **python "HZF-Download-Manager-Tinker-V4.9.pyw"** / **"HZF-Download-Manager-Tinker-V4.9.exe"**
 
-# Меню
-![tk](https://i.imgur.com/RizHcNu.png)
-![cmd](https://i.imgur.com/33SdjQN.png)
+# Менюдиректорию
+![tk](https://i.imgur.com/Do6p99D.png)
+![cmd](https://i.imgur.com/N6TVz1n.png)
 
 ___
 # 💰Поддержать проект:
