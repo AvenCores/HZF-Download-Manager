@@ -589,4 +589,5 @@ file.place(x=330, y=500)
 poetry = 'Powered by HZF❤️'
 label3 = Label(text=poetry, justify=CENTER, font="Ubuntu 10 bold")
 label3.place(x=5, y=520)
+
 root.mainloop()
