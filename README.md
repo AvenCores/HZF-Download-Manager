@@ -14,7 +14,7 @@
 
 # Менюдиректорию
 ![gui](https://i.imgur.com/fw24T0X.png)
-![terminal](https://i.imgur.com/ukw4LA6.png)
+![terminal](https://i1gur.com/ukw4LA6.png)
 
 ___
 # 💰Поддержать проект:
