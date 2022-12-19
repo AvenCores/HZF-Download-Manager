@@ -11,5 +11,5 @@ if platform == "win32":
     system("rd /s /q build")
 
 if platform == "linux" or platform == "linux2" or platform == "unix":
-    print("Данная система не поддерживается для сборки!")
+    print("Для данной системы не поддерживается автоматическая сборка (возможно в будущем добавлю)!")
     input()
