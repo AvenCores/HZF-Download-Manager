@@ -13,8 +13,8 @@
 * GUI - Вводим в Terminal: **python "HZF-Download-Manager-Tinker-V5.1.pyw"**
 
 # Менюдиректорию
-![gui](https://i.imgur.com/fw24T0X.png)
-![terminal](https://i.imgur.com/ukw4LA6.png)
+![gui-tk-archlinux](https://i.imgur.com/e2RBSWE.png)
+![terminal-archlinux](https://i.imgur.com/4e1h0gh.png)
 
 ___
 # 💰Поддержать проект:
