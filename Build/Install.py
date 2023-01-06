@@ -4,7 +4,7 @@ from sys import platform
 if platform == "win32":
         print("Установка библиотек")
         system("pip3 install --upgrade pip")
-        bib = ["requests", "tk","pyinstaller"]
+        bib = ["requests","tk","pyinstaller"]
         for i in range(len(bib)):
                 system("pip3 install "+bib[i])
         system('cls' if name == 'nt' else 'clear')

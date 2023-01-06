@@ -1,7 +1,7 @@
 from sys import platform
 from os import system
 
-ver = 5.1
+ver = 5.2
 
 system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Terminal-V" + str(ver) + ".py")
 system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Tinker-V" + str(ver) + ".pyw")
