@@ -1,7 +1,7 @@
 from sys import platform
 from os import system
 
-ver = 5.3
+ver = 5.4
 
 if platform == "win32":
     system("rd /s /q build")
