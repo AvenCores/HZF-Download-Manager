@@ -9,8 +9,8 @@
 * Запускаем установку доп. компонентов: **python "Install-Terminal.py"** / **python "Install-Tinker.py"**
 
 # Запуск
-* CMD - Вводим в Terminal: **python "HZF-Download-Manager-Terminal-V5.5.py"** / **"HZF-Download-Manager-Terminal-V5.5.exe"**
-* GUI - Вводим в Terminal: **python "HZF-Download-Manager-Tinker-V5.5.pyw"** / **"HZF-Download-Manager-Tinker-V5.5.exe"**
+* CMD - Вводим в Terminal: **python "HZF-Download-Manager-Terminal-V5.6.py"** / **"HZF-Download-Manager-Terminal-V5.6.exe"**
+* GUI - Вводим в Terminal: **python "HZF-Download-Manager-Tinker-V5.6.pyw"** / **"HZF-Download-Manager-Tinker-V5.6.exe"**
 
 # Менюдиректорию
 ![gui-tk-windows](https://i.imgur.com/P9W2h2d.png)
