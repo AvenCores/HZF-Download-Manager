@@ -6,6 +6,26 @@ from pathlib import Path
 
 version = "5.8"
 
+def autoupdate():
+    global version
+    print("Проверка обновлений")
+    try:
+        upd=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/lastver.txt')
+        upd_vers = float(upd.text[0:])
+        if upd_vers > version:
+            print("Найдено обновление\n" + upd.text[0:])
+            print("\nНачато обновление")
+            upd_boom=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF-Download-Manager-Terminal.py')
+            f = open("HZF-Download-Manager-Terminal.py", "wb")
+            f.write(upd_boom.content)
+            f.close()
+            print("\nОбновление завершено, откройте данную утилиту заново командой.")
+            return "exit"
+        else: print("Ошибка, файл обновлений не найден")
+    except BaseException:
+        print("Нет интернета, попробуйте позже")
+        input(exit)
+
 def installSMS():
             global banner
             global banner2
@@ -665,10 +685,11 @@ def info():
     global banner4
     global banner5
     global banner6
-    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nАвтор данной утилиты не несет никакой ответственности за проделлание вами действия, все продукт команды HZF предостовляются только в ознакомительных целях!\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "HZF Download Manager - это простая утилита для скачивания всех утилит от HZF (avencores)." + "\n\nАвтор данной утилиты не несет никакой ответственности за проделлание вами действия, все продукт команды HZF предостовляются только в ознакомительных целях!\n\n" + "Разрабочик: avencores\n\n" + "Интерфейс: Terminal\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
     input()
 
 while True:
+    autoupdate()
     banner = ("\n" * 100) + colored("""
 ██████╗ ██╗    ██╗    ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗ 
 ██╔══██╗██║    ██║    ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗

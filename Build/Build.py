@@ -1,14 +1,12 @@
 from sys import platform
 from os import system
 
-ver = 5.8
-
 if platform == "win32":
     system("rd /s /q build")
     system("rd /s /q dist")
     system("del /q *.spec")
-    system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Terminal-V" + str(ver) + ".py")
-    system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Tinker-V" + str(ver) + ".pyw")
+    system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Terminal.py")
+    system("pyinstaller --clean -F --uac-admin ..\HZF-Download-Manager-Tinker.pyw")
     system("del /q *.spec")
     system("rd /s /q build")
     system("rd /s /q %USERPROFILE%\AppData\Local\pyinstaller")
