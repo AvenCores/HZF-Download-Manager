@@ -4,7 +4,7 @@ from requests import get
 from sys import platform,argv
 from pathlib import Path
 
-version = 7
+version = 8
 
 if "--updated" in argv:
     banner = ("\n" * 100) + colored("""
@@ -45,7 +45,7 @@ def autoupdate():
     try:
         if var > version:
             upd_dwn=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF-Download-Manager-Terminal.py')
-            f = open("HZF-Download-Manager-Terminal.py", "wb")
+            f = open(r"HZF-Download-Manager-Terminal.py", "wb")
             f.write(upd_dwn.content)
             f.close()
             system("python HZF-Download-Manager-Terminal.py --updated")
@@ -665,7 +665,7 @@ def GiveMeBadgeRUS():
             if platform == "linux" or platform == "linux2" or platform == "unix":
                 Path("HZF Project").mkdir(parents=True, exist_ok=True)
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/GiveMeBadge-RUS', "wb")
+                f=open(r'c:/HZF Project/GiveMeBadge-RUS.zip', "wb")
                 ufr = get("https://github.com/AvenCores/GiveMeBadge-RUS/archive/refs/heads/master.zip")
                 f.write(ufr.content)
                 f.close()
@@ -680,7 +680,7 @@ def GiveMeBadgeRUS():
                 except OSError as error:
                     False
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/GiveMeBadge-RUS', "wb")
+                f=open(r'c:/HZF Project/GiveMeBadge-RUS.zip', "wb")
                 ufr = get("https://github.com/AvenCores/GiveMeBadge-RUS/archive/refs/heads/master.zip")
                 f.write(ufr.content)
                 f.close()
@@ -697,7 +697,7 @@ def DenisLeadERTVMinecraftServercheck():
             if platform == "linux" or platform == "linux2" or platform == "unix":
                 Path("HZF Project").mkdir(parents=True, exist_ok=True)
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check', "wb")
+                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check.zip', "wb")
                 ufr = get("https://github.com/AvenCores/Denis-LeadER-TV-Minecraft-Server-check/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
@@ -712,11 +712,43 @@ def DenisLeadERTVMinecraftServercheck():
                 except OSError as error:
                     False
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check', "wb")
+                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check.zip', "wb")
                 ufr = get("https://github.com/AvenCores/Denis-LeadER-TV-Minecraft-Server-check/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
                 print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nDenis-LeadER-TV-Minecraft-Server-check был сохранен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+                input()   
+
+def integrtermclock():
+            global banner
+            global banner2
+            global banner3
+            global banner4
+            global banner5
+            global banner6
+            if platform == "linux" or platform == "linux2" or platform == "unix":
+                Path("HZF Project").mkdir(parents=True, exist_ok=True)
+                system('cls' if name == 'nt' else 'clear')
+                f=open(r'c:/HZF Project/Integration-Terminal-Clock-in-Windows.zip', "wb")
+                ufr = get("https://github.com/AvenCores/Integration-Terminal-Clock-in-Windows/archive/refs/heads/master.zip")
+                f.write(ufr.content)
+                f.close()
+                system("mv HZF\ Project $HOME")
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nIntegration-Terminal-Clock-in-Windows modules был сохранен в папку $HOME\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+                input()   
+
+            elif platform == "win32":
+                path = 'c:/HZF Project'
+                try:
+                    mkdir(path)
+                except OSError as error:
+                    False
+                system('cls' if name == 'nt' else 'clear')
+                f=open(r'c:/HZF Project/Integration-Terminal-Clock-in-Windows.zip', "wb")
+                ufr = get("https://github.com/AvenCores/Integration-Terminal-Clock-in-Windows/archive/refs/heads/master.zip")
+                f.write(ufr.content)
+                f.close()
+                print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\nIntegration-Terminal-Clock-in-Windows был сохранен в папку C:\HZF Project.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
                 input()   
 
 def info():
@@ -751,7 +783,7 @@ while True:
     print(banner4)
     print(banner5)
     print(banner6)
-    menu = input(colored("Неподдерживаемое\n", "red") + colored("1 ", "cyan") + "- Скачать HZF Bomber V1.4\n" + colored("2 ", "cyan") + "- Скачать HZF Email Bomber V1.1\n" + colored("3 ", "cyan") + "- Скачать HZF_VK_DIALOG_TOKEN\n" + colored("4 ", "cyan") + "- Скачать HZF Windows Control V1.0\n" + colored("5 ", "cyan") + "- Скачать HZF csgo external cheats V1.1\n" + colored("6 ", "cyan") + "- Скачать HZF Weather in your city V2.0\n\n" + colored("Поддерживаемое\n", "blue") + colored("7 ", "cyan") +  "- Скачать HZF Downloader Proxy V2.0\n" + colored("8 ", "cyan") + "- Скачать HZF ORION Bomber V1.5.5 (LTS)\n"  + colored("9 ", "cyan") + "- Скачать Upgrade pip modules V3.2\n" + colored("10 ", "cyan") +  "- Скачать HZF Tk Clock V2.7\n" + colored("11 ", "cyan") +  "- Скачать TG AVA DOWNLOAD V3.0\n" + colored("12 ", "cyan") + "- Скачать Integration Upgrade pip modules V3.2\n" + colored("13 ", "cyan") + "- Скачать Activator WinRAR V4.3.1\n" + colored("14 ", "cyan") + "- Скачать Windows Cleaner\n" + colored("15 ", "cyan") + "- Скачать Terminal Clock\n" + colored("16 ", "cyan") + "- Скачать Auto install pip modules\n" + colored("17 ", "cyan") + "- Скачать GiveMeBadgeRUS\n" + colored("18 ", "cyan") + "- Скачать Denis-LeadER-TV-Minecraft-Server-check" + "\n\n" + colored("98 ", "cyan") + "- Проверить обновления утилиты" + "\n\n" + colored("99 ", "cyan") + "- Важная информация!\n\n" + colored("0 ", "cyan") + "- Выход\n\n" + colored("HZF DOWNLOAD MANAGER ##>>", "red"))
+    menu = input(colored("Неподдерживаемое\n", "red") + colored("1 ", "cyan") + "- Скачать HZF Bomber V1.4\n" + colored("2 ", "cyan") + "- Скачать HZF Email Bomber V1.1\n" + colored("3 ", "cyan") + "- Скачать HZF_VK_DIALOG_TOKEN\n" + colored("4 ", "cyan") + "- Скачать HZF Windows Control V1.0\n" + colored("5 ", "cyan") + "- Скачать HZF csgo external cheats V1.1\n" + colored("6 ", "cyan") + "- Скачать HZF Weather in your city V2.0\n\n" + colored("Поддерживаемое\n", "blue") + colored("7 ", "cyan") +  "- Скачать HZF Downloader Proxy V2.0\n" + colored("8 ", "cyan") + "- Скачать HZF ORION Bomber V1.5.5 (LTS)\n"  + colored("9 ", "cyan") + "- Скачать Upgrade pip modules V3.2\n" + colored("10 ", "cyan") +  "- Скачать HZF Tk Clock V2.7\n" + colored("11 ", "cyan") +  "- Скачать TG AVA DOWNLOAD V3.0\n" + colored("12 ", "cyan") + "- Скачать Integration Upgrade pip modules V3.2\n" + colored("13 ", "cyan") + "- Скачать Activator WinRAR V4.3.1\n" + colored("14 ", "cyan") + "- Скачать Windows Cleaner\n" + colored("15 ", "cyan") + "- Скачать Terminal Clock\n" + colored("16 ", "cyan") + "- Скачать Auto install pip modules\n" + colored("17 ", "cyan") + "- Скачать GiveMeBadgeRUS\n" + colored("18 ", "cyan") + "- Скачать Denis-LeadER-TV-Minecraft-Server-check\n" + colored("19 ", "cyan") + "- Скачать Integration-Terminal-Clock-in-Windows V1.0" + "\n\n" + colored("88 ", "cyan") + "- Проверить обновления" + "\n\n" + colored("99 ", "cyan") + "- Важная информация!\n\n" + colored("0 ", "cyan") + "- Выход\n\n" + colored("HZF DOWNLOAD MANAGER ##>>", "red"))
     if menu == "1": installSMS()
     if menu == "2": installEmail()
     if menu == "3": installVkTok()
@@ -770,6 +802,7 @@ while True:
     if menu == "16": Autoinstallpipmodules()
     if menu == "17": GiveMeBadgeRUS()
     if menu == "18": DenisLeadERTVMinecraftServercheck()
-    if menu == "98": autoupdate()
+    if menu == "19": integrtermclock()
+    if menu == "88": autoupdate()
     if menu == "99": info()
     if menu == "0": exit()

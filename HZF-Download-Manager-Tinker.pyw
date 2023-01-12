@@ -6,11 +6,11 @@ from pathlib import Path
 import ctypes as ct
 import webbrowser
 
-version = 7
+version = 8
 
 root = Tk()
-root.title('Download Manager ' + str(version))
-root.geometry('750x545')
+root.title('Download Manager')
+root.geometry('750x585')
 root.resizable(width=False, height=False)
 
 if "--updated" in argv:
@@ -516,7 +516,7 @@ def GiveMeBadgeRUS():
             if platform == "linux" or platform == "linux2" or platform == "unix":
                 Path("HZF Project").mkdir(parents=True, exist_ok=True)
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/GiveMeBadge-RUS', "wb")
+                f=open(r'c:/HZF Project/GiveMeBadge-RUS.zip', "wb")
                 ufr = get("https://github.com/AvenCores/GiveMeBadge-RUS/archive/refs/heads/master.zip")
                 f.write(ufr.content)
                 f.close()
@@ -530,7 +530,7 @@ def GiveMeBadgeRUS():
                 except OSError as error:
                     False
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/GiveMeBadge-RUS', "wb")
+                f=open(r'c:/HZF Project/GiveMeBadge-RUS.zip', "wb")
                 ufr = get("https://github.com/AvenCores/GiveMeBadge-RUS/archive/refs/heads/master.zip")
                 f.write(ufr.content)
                 f.close()
@@ -540,7 +540,7 @@ def DenisLeadERTVMinecraftServercheck():
             if platform == "linux" or platform == "linux2" or platform == "unix":
                 Path("HZF Project").mkdir(parents=True, exist_ok=True)
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check', "wb")
+                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check.zip', "wb")
                 ufr = get("https://github.com/AvenCores/Denis-LeadER-TV-Minecraft-Server-check/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
@@ -554,11 +554,35 @@ def DenisLeadERTVMinecraftServercheck():
                 except OSError as error:
                     False
                 system('cls' if name == 'nt' else 'clear')
-                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check', "wb")
+                f=open(r'c:/HZF Project/Denis-LeadER-TV-Minecraft-Server-check.zip', "wb")
                 ufr = get("https://github.com/AvenCores/Denis-LeadER-TV-Minecraft-Server-check/archive/refs/heads/main.zip")
                 f.write(ufr.content)
                 f.close()
                 messagebox.showinfo(title="Успешно", message='Denis-LeadER-TV-Minecraft-Server-check modules был сохранен в папку C:\HZF Project') 
+
+def integrtermclock():
+            if platform == "linux" or platform == "linux2" or platform == "unix":
+                Path("HZF Project").mkdir(parents=True, exist_ok=True)
+                system('cls' if name == 'nt' else 'clear')
+                f=open(r'c:/HZF Project/Integration-Terminal-Clock-in-Windows.zip', "wb")
+                ufr = get("https://github.com/AvenCores/Integration-Terminal-Clock-in-Windows/archive/refs/heads/master.zip")
+                f.write(ufr.content)
+                f.close()
+                system("mv HZF\ Project $HOME")
+                messagebox.showinfo(title="Успешно", message='Integration-Terminal-Clock-in-Windows был сохранен в папку $HOME\HZF Project')   
+
+            elif platform == "win32":
+                path = 'c:/HZF Project'
+                try:
+                    mkdir(path)
+                except OSError as error:
+                    False
+                system('cls' if name == 'nt' else 'clear')
+                f=open(r'c:/HZF Project/Integration-Terminal-Clock-in-Windows.zip', "wb")
+                ufr = get("https://github.com/AvenCores/Integration-Terminal-Clock-in-Windows/archive/refs/heads/master.zip")
+                f.write(ufr.content)
+                f.close()
+                messagebox.showinfo(title="Успешно", message='Integration-Terminal-Clock-in-Windows modules был сохранен в папку C:\HZF Project') 
 
 if platform == "win32":
     poetry = 'Поддерживаемое'
@@ -633,6 +657,9 @@ file.place(x=330, y=100)
 file = Button(text='Скачать Denis-LeadER-TV-Minecraft-Server-check', command=DenisLeadERTVMinecraftServercheck)
 file.place(x=330, y=500)
 
+file = Button(text='Скачать Integration-Terminal-Clock-in-Windows V1.0', command=integrtermclock)
+file.place(x=330, y=540)
+
 def opentgchannel():
     url = "https://t.me/hzfnews"
     webbrowser.open(url, new=2)
@@ -696,7 +723,7 @@ def checkupdate():
     try:
         if var > version:
             upd_dwn=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF-Download-Manager-Tinker.pyw')
-            f = open("HZF-Download-Manager-Tinker.pyw", "wb")
+            f = open(r"HZF-Download-Manager-Tinker.pyw", "wb")
             f.write(upd_dwn.content)
             f.close()
             system("python HZF-Download-Manager-Tinker.pyw --updated")
@@ -739,12 +766,12 @@ mainmenu.add_cascade(label="Справка", menu=helpmenu)
 if platform == "win32":
     poetry = 'Powered by HZF❤️'
     label3 = Label(text=poetry, justify=CENTER, bg="#000000", fg="white", font="Ubuntu 10 bold")
-    label3.place(x=5, y=520)
+    label3.place(x=5, y=560)
 
 elif platform == "linux" or platform == "linux2" or platform == "unix":
     poetry = 'Powered by HZF❤️'
     label3 = Label(text=poetry, justify=CENTER, font="Ubuntu 10 bold")
-    label3.place(x=5, y=520)
+    label3.place(x=5, y=560)
 
 
 if platform == "win32":
