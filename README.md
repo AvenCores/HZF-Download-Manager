@@ -13,7 +13,7 @@
 * `GUI - Вводим в Terminal:` **python "HZF-Download-Manager-Tinker.pyw"** `/` **"HZF-Download-Manager-Tinker.exe"**
 
 # 👑Меню
-![gui-tk-windows](https://i.imgur.com/FxjNBR0.png)
+![gui-tk-windows](https://i.imgur.com/dDmPRTO.png)
 ![cmd-windows](https://i.imgur.com/7qFgVot.png)
 
 ___

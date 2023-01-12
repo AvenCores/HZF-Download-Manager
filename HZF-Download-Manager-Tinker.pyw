@@ -6,7 +6,7 @@ from pathlib import Path
 import ctypes as ct
 import webbrowser
 
-version = "5.8"
+version = 6
 
 root = Tk()
 root.title('Download Manager ' + str(version))
@@ -672,6 +672,41 @@ def omyprog():
 Версия: {version}
 """)
 
+def removelasttxt():
+    if platform == "win32":
+        system("del /Q lastver.txt")
+    elif platform == "linux" or platform == "linux2" or platform == "unix":
+        system("rm -r lastver.txt")
+
+def checkupdate():
+    system('cls' if name == 'nt' else 'clear')
+    global version
+
+    f=open(r'lastver.txt', "wb")
+    ufr = get("https://pastebin.com/raw/PHFVUtBM")
+    f.write(ufr.content)
+    f.close()
+
+    num = open("lastver.txt")
+    var = int(num.read())
+
+    try:
+        if var > version:
+            upd_dwn=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF-Download-Manager-Tinker.pyw')
+            f = open("HZF-Download-Manager-Tinker.pyw", "wb")
+            f.write(upd_dwn.content)
+            f.close()
+            messagebox.showinfo(title="Успешно!", message="Обновление завершено, перезапустите утилиту для запуска новой версии.")
+        elif var == version:
+            messagebox.showinfo(title="Нечего обновлять!", message="Вы используете последнюю версию.")
+        elif var < version:
+            messagebox.showerror(title="Что за хуйня?", message="Ты явно ахуел.")
+        else:
+            messagebox.showerror(title="Ошибка", message="Файл обновлений не найден.")
+    except BaseException:
+        messagebox.showerror(title="Ошибка", message="Нету подключения к серверу, попробуйте позже.")
+
+
 mainmenu = Menu(root) 
 root.config(menu=mainmenu)  
 
@@ -691,6 +726,7 @@ donatemenu.add_command(label="Qiwi Донат", command=qiwi)
 donatemenu.add_command(label="Сбер Донат", command=cber)
 donatemenu.add_command(label="ВТБ Донат", command=vtb)
 
+mainmenu.add_cascade(label="Проверить обновления", command=checkupdate)
 mainmenu.add_cascade(label="Информация", menu=mygroup)
 mainmenu.add_cascade(label="Донат", menu=donatemenu)
 mainmenu.add_cascade(label="Справка", menu=helpmenu)
@@ -714,3 +750,4 @@ elif platform == "linux" or platform == "linux2" or platform == "unix":
     pass
 
 root.mainloop()
+removelasttxt()
