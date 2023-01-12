@@ -14,7 +14,7 @@
 
 # 👑Меню
 ![gui-tk-windows](https://i.imgur.com/FxjNBR0.png)
-![terminal-archlinux](https://i.imgur.com/4e1h0gh.png)
+![cmd-windows](https://i.imgur.com/7qFgVot.png)
 
 ___
 # 💰Поддержать проект:

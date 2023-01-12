@@ -4,36 +4,46 @@ from requests import get
 from sys import platform
 from pathlib import Path
 
-version = "5.9"
+version = 6
+
+def removelasttxt():
+    if platform == "win32":
+        system("del /Q lastver.txt")
+    elif platform == "linux" or platform == "linux2" or platform == "unix":
+        system("rm -r lastver.txt")
 
 def autoupdate():
     system('cls' if name == 'nt' else 'clear')
     global version
-    print("Проверка обновлений!")
+
+    f=open(r'lastver.txt', "wb")
+    ufr = get("https://pastebin.com/raw/PHFVUtBM")
+    f.write(ufr.content)
+    f.close()
+
+    num = open("lastver.txt")
+    var = int(num.read())
+
     try:
-        upd=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/lastver.txt')
-        upd_vers = float(upd.text[0:])
-        if upd_vers > version:
-            print("Найдено обновление!\n" + upd.text[0:])
-            print("\nНачато обновление!")
+        if var > version:
             upd_dwn=get('https://raw.githubusercontent.com/AvenCores/HZF-Download-Manager/main/HZF-Download-Manager-Terminal.py')
             f = open("HZF-Download-Manager-Terminal.py", "wb")
             f.write(upd_dwn.content)
             f.close()
             system('cls' if name == 'nt' else 'clear')
-            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\Обновление завершено, перезапустите утилиту для запуска новой версии.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Обновление завершено, перезапустите утилиту для запуска новой версии.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
             input()
-        elif upd_dwn == version:
+        elif var == version:
             system('cls' if name == 'nt' else 'clear')
-            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\Вы используете последнюю версию.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Вы используете последнюю версию.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
             input()
-        elif upd_dwn < version:
+        elif var < version:
             system('cls' if name == 'nt' else 'clear')
-            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\Ты явно ахуел.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Ты явно ахуел.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
             input()
         else:
             system('cls' if name == 'nt' else 'clear')
-            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "\Файл обновлений не найден.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
+            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Файл обновлений не найден.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
             input()
     except BaseException:
         system('cls' if name == 'nt' else 'clear')
@@ -703,6 +713,7 @@ def info():
     input()
 
 while True:
+    removelasttxt()
     banner = ("\n" * 100) + colored("""
 ██████╗ ██╗    ██╗    ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗ 
 ██╔══██╗██║    ██║    ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗
