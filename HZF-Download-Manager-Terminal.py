@@ -49,7 +49,6 @@ def autoupdate():
             f.write(upd_dwn.content)
             f.close()
             system("python HZF-Download-Manager-Terminal.py --updated")
-            system("python HZF-Download-Manager-Terminal.exe --updated")
             exit()
         elif var == version:
             system('cls' if name == 'nt' else 'clear')

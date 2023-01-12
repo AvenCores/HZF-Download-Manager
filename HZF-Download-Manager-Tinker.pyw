@@ -700,7 +700,6 @@ def checkupdate():
             f.write(upd_dwn.content)
             f.close()
             system("python HZF-Download-Manager-Tinker.pyw --updated")
-            system("python HZF-Download-Manager-Tinker.exe --updated")
             root.quit()
         elif var == version:
             messagebox.showinfo(title="Нечего обновлять!", message="Вы используете последнюю версию.")
