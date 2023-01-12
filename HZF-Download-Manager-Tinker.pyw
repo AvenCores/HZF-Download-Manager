@@ -1,17 +1,20 @@
 from tkinter import Tk,Label,CENTER,Button,messagebox,Menu
 from os import system,mkdir,name
-from sys import platform
+from sys import platform, argv
 from requests import get
 from pathlib import Path
 import ctypes as ct
 import webbrowser
 
-version = 6
+version = 7
 
 root = Tk()
 root.title('Download Manager ' + str(version))
 root.geometry('750x545')
 root.resizable(width=False, height=False)
+
+if "--updated" in argv:
+    messagebox.showinfo(title="Обновлено", message=f"Вы успешно обновились до версии {version}")
 
 
 if platform == "win32":
@@ -696,7 +699,9 @@ def checkupdate():
             f = open("HZF-Download-Manager-Tinker.pyw", "wb")
             f.write(upd_dwn.content)
             f.close()
-            messagebox.showinfo(title="Успешно!", message="Обновление завершено, перезапустите утилиту для запуска новой версии.")
+            system("python HZF-Download-Manager-Tinker.pyw --updated")
+            system("python HZF-Download-Manager-Tinker.exe --updated")
+            root.quit()
         elif var == version:
             messagebox.showinfo(title="Нечего обновлять!", message="Вы используете последнюю версию.")
         elif var < version:

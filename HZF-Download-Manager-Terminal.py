@@ -1,10 +1,28 @@
 from os import system,mkdir,name
 from termcolor import colored
 from requests import get
-from sys import platform
+from sys import platform,argv
 from pathlib import Path
 
-version = 6
+version = 7
+
+if "--updated" in argv:
+    banner = ("\n" * 100) + colored("""
+██████╗ ██╗    ██╗    ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗ 
+██╔══██╗██║    ██║    ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗
+██║  ██║██║ █╗ ██║    ██╔████╔██║███████║██╔██╗ ██║███████║██║  ███╗█████╗  ██████╔╝
+██║  ██║██║███╗██║    ██║╚██╔╝██║██╔══██║██║╚██╗██║██╔══██║██║   ██║██╔══╝  ██╔══██╗
+██████╔╝╚███╔███╔╝    ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║╚██████╔╝███████╗██║  ██║
+╚═════╝  ╚══╝╚══╝     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+    """, "green")
+    banner2 = colored("[", "blue")+"Developers      :"+colored("HZF", "green")
+    banner3 = colored("[", "blue")+"Version         :"+colored(version, "red")
+    banner4 = colored("[", "blue")+"Telegram Channel:"+colored("@hzfnews", "cyan")+colored("              <-- Подпишись!", "green")
+    banner5 = colored("[", "blue")+"YouTube Channel :"+colored("youtube.com/c/HZFYT", "cyan")+colored("   <-- Подпишись!", "green")
+    banner6 = colored("[", "blue")+"VK              :"+colored("vk.com/hzforum1", "cyan")+colored("       <-- Подпишись!", "green")+"\n"
+
+    print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + f"Обновление завершено, вы успешно обновились до {version}" + colored(".\n\nНажмите ENTER для выхода в главное меню", "yellow"))
+    input()
 
 def removelasttxt():
     if platform == "win32":
@@ -30,9 +48,9 @@ def autoupdate():
             f = open("HZF-Download-Manager-Terminal.py", "wb")
             f.write(upd_dwn.content)
             f.close()
-            system('cls' if name == 'nt' else 'clear')
-            print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Обновление завершено, перезапустите утилиту для запуска новой версии.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
-            input()
+            system("python HZF-Download-Manager-Terminal.py --updated")
+            system("python HZF-Download-Manager-Terminal.exe --updated")
+            exit()
         elif var == version:
             system('cls' if name == 'nt' else 'clear')
             print(banner + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + banner6 + "\n" + "Вы используете последнюю версию.\n\n" + colored("Нажмите ENTER для выхода в главное меню", "yellow"))
