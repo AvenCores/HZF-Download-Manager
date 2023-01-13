@@ -6,7 +6,7 @@ from pathlib import Path
 import ctypes as ct
 import webbrowser
 
-version = 8
+version = 9
 
 root = Tk()
 root.title('Download Manager')
@@ -630,7 +630,7 @@ file.place(x=330, y=60)
 file = Button(text='Скачать Upgrade pip modules V1.1', command=installpipupgrade)
 file.place(x=330, y=180)
 
-file = Button(text='Скачать HZF Tk Clock V2.7', command=installhzftkclock)
+file = Button(text='Скачать HZF Tk Clock V2.8', command=installhzftkclock)
 file.place(x=330, y=220)
 
 file = Button(text='Скачать TG AVA DOWNLOAD V3.0', command=installtgavadwnld)
@@ -639,7 +639,7 @@ file.place(x=330, y=260)
 file = Button(text='Скачать Integration Upgrade pip modules in Windows V3.2', command=interupgrdmodules)
 file.place(x=330, y=300)
 
-file = Button(text='Скачать Activator WinRAR V4.3.1', command=interupgrdmodules)
+file = Button(text='Скачать Activator WinRAR V4.4', command=interupgrdmodules)
 file.place(x=330, y=340)
 
 file = Button(text='Скачать Windows Cleaner', command=windowscleaner)

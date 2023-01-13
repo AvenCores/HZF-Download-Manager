@@ -4,7 +4,7 @@ from requests import get
 from sys import platform,argv
 from pathlib import Path
 
-version = 8
+version = 9
 
 if "--updated" in argv:
     banner = ("\n" * 100) + colored("""
@@ -783,7 +783,7 @@ while True:
     print(banner4)
     print(banner5)
     print(banner6)
-    menu = input(colored("Неподдерживаемое\n", "red") + colored("1 ", "cyan") + "- Скачать HZF Bomber V1.4\n" + colored("2 ", "cyan") + "- Скачать HZF Email Bomber V1.1\n" + colored("3 ", "cyan") + "- Скачать HZF_VK_DIALOG_TOKEN\n" + colored("4 ", "cyan") + "- Скачать HZF Windows Control V1.0\n" + colored("5 ", "cyan") + "- Скачать HZF csgo external cheats V1.1\n" + colored("6 ", "cyan") + "- Скачать HZF Weather in your city V2.0\n\n" + colored("Поддерживаемое\n", "blue") + colored("7 ", "cyan") +  "- Скачать HZF Downloader Proxy V2.0\n" + colored("8 ", "cyan") + "- Скачать HZF ORION Bomber V1.5.5 (LTS)\n"  + colored("9 ", "cyan") + "- Скачать Upgrade pip modules V3.2\n" + colored("10 ", "cyan") +  "- Скачать HZF Tk Clock V2.7\n" + colored("11 ", "cyan") +  "- Скачать TG AVA DOWNLOAD V3.0\n" + colored("12 ", "cyan") + "- Скачать Integration Upgrade pip modules V3.2\n" + colored("13 ", "cyan") + "- Скачать Activator WinRAR V4.3.1\n" + colored("14 ", "cyan") + "- Скачать Windows Cleaner\n" + colored("15 ", "cyan") + "- Скачать Terminal Clock\n" + colored("16 ", "cyan") + "- Скачать Auto install pip modules\n" + colored("17 ", "cyan") + "- Скачать GiveMeBadgeRUS\n" + colored("18 ", "cyan") + "- Скачать Denis-LeadER-TV-Minecraft-Server-check\n" + colored("19 ", "cyan") + "- Скачать Integration-Terminal-Clock-in-Windows V1.0" + "\n\n" + colored("88 ", "cyan") + "- Проверить обновления" + "\n\n" + colored("99 ", "cyan") + "- Важная информация!\n\n" + colored("0 ", "cyan") + "- Выход\n\n" + colored("HZF DOWNLOAD MANAGER ##>>", "red"))
+    menu = input(colored("Неподдерживаемое\n", "red") + colored("1 ", "cyan") + "- Скачать HZF Bomber V1.4\n" + colored("2 ", "cyan") + "- Скачать HZF Email Bomber V1.1\n" + colored("3 ", "cyan") + "- Скачать HZF_VK_DIALOG_TOKEN\n" + colored("4 ", "cyan") + "- Скачать HZF Windows Control V1.0\n" + colored("5 ", "cyan") + "- Скачать HZF csgo external cheats V1.1\n" + colored("6 ", "cyan") + "- Скачать HZF Weather in your city V2.0\n\n" + colored("Поддерживаемое\n", "blue") + colored("7 ", "cyan") +  "- Скачать HZF Downloader Proxy V2.0\n" + colored("8 ", "cyan") + "- Скачать HZF ORION Bomber V1.5.5 (LTS)\n"  + colored("9 ", "cyan") + "- Скачать Upgrade pip modules V3.2\n" + colored("10 ", "cyan") +  "- Скачать HZF Tk Clock V2.8\n" + colored("11 ", "cyan") +  "- Скачать TG AVA DOWNLOAD V3.0\n" + colored("12 ", "cyan") + "- Скачать Integration Upgrade pip modules V3.2\n" + colored("13 ", "cyan") + "- Скачать Activator WinRAR V4.4\n" + colored("14 ", "cyan") + "- Скачать Windows Cleaner\n" + colored("15 ", "cyan") + "- Скачать Terminal Clock\n" + colored("16 ", "cyan") + "- Скачать Auto install pip modules\n" + colored("17 ", "cyan") + "- Скачать GiveMeBadgeRUS\n" + colored("18 ", "cyan") + "- Скачать Denis-LeadER-TV-Minecraft-Server-check\n" + colored("19 ", "cyan") + "- Скачать Integration-Terminal-Clock-in-Windows V1.0" + "\n\n" + colored("88 ", "cyan") + "- Проверить обновления" + "\n\n" + colored("99 ", "cyan") + "- Важная информация!\n\n" + colored("0 ", "cyan") + "- Выход\n\n" + colored("HZF DOWNLOAD MANAGER ##>>", "red"))
     if menu == "1": installSMS()
     if menu == "2": installEmail()
     if menu == "3": installVkTok()
